@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Res, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, Param, Post, Res, UploadedFile, UseInterceptors, Body } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { extname, join } from 'path';
@@ -20,7 +20,6 @@ export class FilesController {
       }),
     )
     uploadFile(@UploadedFile() file) {
-      console.log(file);
       return { message: '文件上传成功', filename: file.filename };
     }
     @Get(':filename')

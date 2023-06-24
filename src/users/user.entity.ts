@@ -11,16 +11,16 @@ export class User {
   @Column()
   disease: string;
 
-  @Column()
+  @Column({type:'float'})
   lng:number
 
-  @Column()
+  @Column({type:'float'})
   lat:number
 
-  @Column()
+  @Column({type:'text'})
   outPutData:string
   
-  @Column({type:'text'})
-  imgData:string
+  @Column()
+  imgName:string
 
 }
