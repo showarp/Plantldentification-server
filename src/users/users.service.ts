@@ -18,11 +18,11 @@ export class UsersService {
     return this.usersRepository.findOne(id);
   }
 
-  async delete(id: {id:number}): Promise<void> {
+  async delete(id:number[]): Promise<void> {
     await this.usersRepository.delete(id);
   }
 
-  async insert(data:{name: string,disease: string,lng:number,lat:number,outPutData:string,imgName:string}): Promise<void> {
+  async insert(data:{name: string,disease: string,lng:number,lat:number,outPutData:string,imgName:string,address:string}): Promise<void> {
     await this.usersRepository.insert(data)
   }
 }

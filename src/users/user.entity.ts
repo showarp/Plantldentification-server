@@ -6,10 +6,10 @@ export class User {
   id: number;
 
   @Column()
-  name: string;
+  address: string;
 
   @Column()
-  disease: string;
+  name: string;
 
   @Column({type:'float'})
   lng:number
@@ -23,4 +23,6 @@ export class User {
   @Column()
   imgName:string
 
+  @Column()
+  speed:number
 }
