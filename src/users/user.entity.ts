@@ -25,4 +25,7 @@ export class User {
 
   @Column()
   speed:number
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  datetime:Date
 }

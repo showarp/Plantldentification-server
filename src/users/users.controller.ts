@@ -18,7 +18,6 @@ export class UsersController {
     let All = await this.usersService.findAll();
     let xls = json2xls(All);
     let xlsPath = join(__dirname, '../../', 'uploads', 'data.xlsx');
-    console.log(xlsPath)
     fs.writeFileSync(xlsPath, xls, 'binary');
     return {message:"ok"}
   }
